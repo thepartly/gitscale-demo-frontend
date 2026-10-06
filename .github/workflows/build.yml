@@ -21,6 +21,10 @@ jobs:
           key: gitscale-${{ env.GITSCALE_REV }}
       - if: steps.gitscale.outputs.cache-hit != 'true'
         run: cargo install --git https://github.com/thepartly/gitscale --rev "$GITSCALE_REV" --locked
+      # The SDKs as the applications published them, built; a topic that
+      # joins an application still gets its sources, and scripts/sdks.mjs
+      # builds that SDK.
+      - run: gitscale prefer --artefact imports/application-a imports/application-b
       - run: gitscale sync
       - run: npm ci --no-audit --no-fund && npm run build
       - id: hash
