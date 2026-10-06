@@ -1,0 +1,16 @@
+# Filled in at start by the official image: ${API_A_URL} and ${API_B_URL}
+# from the environment, as deploy/app.env gives them.
+server {
+    listen 80;
+    root /usr/share/nginx/html;
+
+    location /api/a/ {
+        proxy_pass ${API_A_URL};
+    }
+    location /api/b/ {
+        proxy_pass ${API_B_URL};
+    }
+    location / {
+        try_files $uri /index.html;
+    }
+}

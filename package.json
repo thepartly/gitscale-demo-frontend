@@ -1,0 +1,27 @@
+{
+  "name": "gitscale-demo-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sdks": "node scripts/sdks.mjs",
+    "predev": "npm run sdks",
+    "dev": "vite",
+    "prebuild": "npm run sdks",
+    "build": "tsc -p . && vite build"
+  },
+  "dependencies": {
+    "@gitscale-demo/application-a-sdk": "file:imports/application-a/sdk",
+    "@gitscale-demo/application-b-sdk": "file:imports/application-b/sdk",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "typescript": "~5.9.0",
+    "vite": "^7.3.0"
+  }
+}

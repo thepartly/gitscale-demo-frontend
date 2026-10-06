@@ -1,0 +1,7 @@
+# The pins are written at bootstrap, once each release exists: see the demo
+# plan's Bootstrap. frontend asks for the first application-a release, older
+# than the root's. It needs the applications' SDKs, not their dependencies.
+[repos]
+"imports/application-a" = { url = "https://github.com/thepartly/gitscale-demo-application-a.git", revision = "v1-2026.10.06-035219", recursive = false }
+"imports/application-b" = { url = "https://github.com/thepartly/gitscale-demo-application-b.git", revision = "v1-2026.10.06-034348", recursive = false }
+"imports/compose"       = { url = "https://github.com/thepartly/gitscale-demo-compose.git", revision = "v1-2026.10.06-030811" }

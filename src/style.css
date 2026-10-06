@@ -1,0 +1,28 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #1d1d1f;
+  background: #fafafa;
+}
+main {
+  max-width: 32rem;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav a[aria-current="page"] {
+  font-weight: 600;
+}
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+input {
+  flex: 1;
+  padding: 0.4rem;
+}
+.error {
+  color: #b00020;
+}
